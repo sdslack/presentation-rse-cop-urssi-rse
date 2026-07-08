@@ -24,3 +24,20 @@ cd presentation-rse-cop-urssi-rse
 quarto render presentation.qmd
 
 ```
+
+# Steps
+
+1. Create a branch.
+
+2. Commit changes.
+
+Preview changes during local development by running `quarto preview`. 
+
+3. Push branch to GitHub.
+
+4. Open a pull request, which will trigger GitHub Actions to render the slides.
+
+5. Once happy with the changes, merge the pull request into main. This will
+    trigger GitHub Actions to render the slides again and deploy them to GitHub
+    Pages.
+
