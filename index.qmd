@@ -1,31 +1,50 @@
 ---
-title: "presentation"
+title: "DBMI RSE-CoP Presentation: URSSI Research Software Engineering Best Practices"
+subtitle: "7/15/2026"
 format:
   revealjs:
-    theme: default
+    theme: serif
+    incremental: true
+author:
+  - name: "Jess Murphy"
+    email: "jessica.murphy@cuanschutz.edu"
+  - name: "Sarah D. Slack"
+    email: "sarah.slack@cuanschutz.edu"
 ---
 
-# Title Slide
+## URSSI Summer School
 
-testing
+- URSSI = US Research Software Sustainability Institute
+- Credit for this presentation: (Summer School 2026)[https://github.com/si2-urssi/summerschool-June2026]
 
-# Slide 1
+## Managing Environments
 
-+ test
-+ test
-+ test
+- testing Sarah slide
+- test
+- test
 
-# Slide 2
+## Software Design & Modularity
 
-+ test
-    + test again
+- test
+  - test another Sarah slide
 
-
-## Test Slide 3
-
-+ test if this is a separate slide?
+## Structuring Python Packages
 
 
-# Test Slide 4
+## Collaboration with Git/GitHub/Workflows
 
-test final slide
+
+## Testing & Continuous Integration, Linting
+
+**Sarah slide test bold no bullet point**
+*test italic no bullet point*
+
+## Peer Code Review
+
+Sarah final test slide
+
+## Documentation and Versioning
+
+
+## Open Science & Software Citation
+
