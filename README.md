@@ -5,7 +5,10 @@ CU DBMI RSE-CoP about research software engineering best practices, based on
  the 2026 URSSI summer school:
  https://github.com/si2-urssi/summerschool-June2026.
 
-# Setup
+The slides are built with [Quarto](https://quarto.org/) and deployed to GitHub
+Pages at https://sdslack.github.io/presentation-rse-cop-urssi-rse/.
+
+### Setup
 
 1. Install [Quarto](https://quarto.org/) on your system, if not installed
     already.
@@ -25,7 +28,7 @@ quarto render presentation.qmd
 
 ```
 
-# Steps
+### Steps
 
 1. Create a branch.
 
