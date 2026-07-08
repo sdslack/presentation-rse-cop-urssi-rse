@@ -1,9 +1,9 @@
 ---
-title: "DBMI RSE-CoP Presentation: URSSI Research Software Engineering Best Practices"
-subtitle: "7/15/2026"
+title: "URSSI Research Software Engineering Best Practices"
+subtitle: "7/15/2026 DBMI RSE-CoP Meeting"
 format:
   revealjs:
-    theme: serif
+    theme: dracula
     incremental: true
 author:
   - name: "Jess Murphy"
