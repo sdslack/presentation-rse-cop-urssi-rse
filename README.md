@@ -1,10 +1,10 @@
 # presentation-rse-cop-urssi-rse
 
-(Slides)[https://sdslack.github.io/presentation-rse-cop-urssi-rse/] by Jess
+[Slides](https://sdslack.github.io/presentation-rse-cop-urssi-rse/) by Jess
 Murphy and Sarah D. Slack for presentation and discussion at a
-(CU Anschutz DBMI RSE-CoP)[https://github.com/CU-DBMI/rse-cop] meeting around
+[CU Anschutz DBMI RSE-CoP](https://github.com/CU-DBMI/rse-cop) meeting around
 research software engineering best practices, based on the
-(2026 URSSI Summer School)[https://github.com/si2-urssi/summerschool-June2026].
+[2026 URSSI Summer School](https://github.com/si2-urssi/summerschool-June2026).
 Goal is to integrate discussion throughout about the group's personal
 experiences and the reality of implementation in practice.
 
@@ -15,7 +15,7 @@ Pages at https://sdslack.github.io/presentation-rse-cop-urssi-rse/.
 ### Viewing the Slides
 
 The slides can be viewed online at
-(https://sdslack.github.io/presentation-rse-cop-urssi-rse/)[https://sdslack.github.io/presentation-rse-cop-urssi-rse/].
+[https://sdslack.github.io/presentation-rse-cop-urssi-rse/](https://sdslack.github.io/presentation-rse-cop-urssi-rse/).
 
 Alternatively, the slides can be rendered and viewed locally by following the
 instructions below:
@@ -50,4 +50,4 @@ running `quarto preview`.
 
 5. Once happy with the pull request, merge the pull request into main. This will
 trigger GitHub Actions to render the slides again and deploy them to the GitHub
-Pages site: (https://sdslack.github.io/presentation-rse-cop-urssi-rse/)[https://sdslack.github.io/presentation-rse-cop-urssi-rse/]
+Pages site: [https://sdslack.github.io/presentation-rse-cop-urssi-rse/](https://sdslack.github.io/presentation-rse-cop-urssi-rse/)
