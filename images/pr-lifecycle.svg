@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 993.79572 134.79979"
+   font-family="'Helvetica Neue', Arial, sans-serif"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="pr-lifecycle.svg"
+   width="993.79572"
+   height="134.79979"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.773"
+     inkscape:cx="496.05189"
+     inkscape:cy="88.832487"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg12" />
+  <defs
+     id="defs1">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="7"
+       markerHeight="7"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#868e96"
+         id="path1" />
+    </marker>
+  </defs>
+  <g
+     id="g9"
+     transform="translate(-3.9481101,-16.356459)">
+    <rect
+       x="10"
+       y="75"
+       width="170"
+       height="62"
+       rx="10"
+       fill="#e7f5ff"
+       stroke="#1c7ed6"
+       stroke-width="2"
+       id="rect1" />
+    <text
+       x="95"
+       y="100"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#1864ab"
+       id="text1">create branch</text>
+    <text
+       x="95"
+       y="120"
+       text-anchor="middle"
+       font-size="12.5px"
+       fill="#868e96"
+       font-family="monospace"
+       id="text2">git switch -c</text>
+    <rect
+       x="220"
+       y="75"
+       width="150"
+       height="62"
+       rx="10"
+       fill="#e7f5ff"
+       stroke="#1c7ed6"
+       stroke-width="2"
+       id="rect2" />
+    <text
+       x="295"
+       y="100"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#1864ab"
+       id="text3">push it</text>
+    <text
+       x="295"
+       y="120"
+       text-anchor="middle"
+       font-size="12.5px"
+       fill="#868e96"
+       font-family="monospace"
+       id="text4">git push</text>
+    <rect
+       x="410"
+       y="75"
+       width="160"
+       height="62"
+       rx="10"
+       fill="#fff9db"
+       stroke="#f08c00"
+       stroke-width="2"
+       id="rect4" />
+    <text
+       x="490"
+       y="100"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#e67700"
+       id="text5">open a PR</text>
+    <text
+       x="490"
+       y="120"
+       text-anchor="middle"
+       font-size="12.5px"
+       fill="#868e96"
+       id="text6">on GitHub</text>
+    <rect
+       x="610"
+       y="75"
+       width="170"
+       height="62"
+       rx="10"
+       fill="#fff0f6"
+       stroke="#e64980"
+       stroke-width="2"
+       id="rect6" />
+    <text
+       x="695"
+       y="100"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#a61e4d"
+       id="text7">review &amp;</text>
+    <text
+       x="695"
+       y="120"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#a61e4d"
+       id="text8">discuss</text>
+    <rect
+       x="820"
+       y="75"
+       width="160"
+       height="62"
+       rx="10"
+       fill="#ebfbee"
+       stroke="#2f9e44"
+       stroke-width="2"
+       id="rect8" />
+    <text
+       x="900"
+       y="110"
+       text-anchor="middle"
+       font-size="15px"
+       font-weight="bold"
+       fill="#2b8a3e"
+       id="text9">merge 🎉</text>
+  </g>
+  <g
+     stroke="#868e96"
+     stroke-width="2.5"
+     fill="none"
+     id="g12"
+     transform="translate(-3.9481101,-16.356459)"
+     style="fill:#ffffff">
+    <line
+       x1="182"
+       y1="106"
+       x2="218"
+       y2="106"
+       marker-end="url(#arrow)"
+       id="line9"
+       style="fill:#ffffff" />
+    <line
+       x1="372"
+       y1="106"
+       x2="408"
+       y2="106"
+       marker-end="url(#arrow)"
+       id="line10"
+       style="fill:#ffffff" />
+    <line
+       x1="572"
+       y1="106"
+       x2="608"
+       y2="106"
+       marker-end="url(#arrow)"
+       id="line11"
+       style="fill:#ffffff" />
+    <line
+       x1="782"
+       y1="106"
+       x2="818"
+       y2="106"
+       marker-end="url(#arrow)"
+       id="line12"
+       style="fill:#ffffff" />
+  </g>
+  <!-- revise loop -->
+  <path
+     d="m 691.05189,58.643541 c 0,-45 -205,-45 -205,-2"
+     stroke="#adb5bd"
+     stroke-width="2"
+     fill="none"
+     stroke-dasharray="5, 4"
+     marker-end="url(#arrow)"
+     id="path12"
+     style="fill:#ffffff" />
+  <text
+     x="588.05188"
+     y="17.643541"
+     text-anchor="middle"
+     font-size="12.5px"
+     fill="#868e96"
+     font-style="italic"
+     id="text12"
+     style="fill:#ffffff">push fixes, re-review</text>
+  <rect
+     style="fill:none"
+     id="rect12"
+     width="993.79572"
+     height="134.79979"
+     x="0"
+     y="0"
+     ry="4.5121264" />
+</svg>

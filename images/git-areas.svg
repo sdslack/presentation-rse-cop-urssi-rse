@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 990.41174 115.05923"
+   viewBox="0 0 995.48785 189.50931"
    font-family="'Helvetica Neue', Arial, sans-serif"
    version="1.1"
-   id="svg15"
-   sodipodi:docname="build-pipeline.svg"
+   id="svg13"
+   sodipodi:docname="git-areas.svg"
+   width="995.48785"
+   height="189.50931"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   width="990.41174"
-   height="115.05923"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview15"
+     id="namedview13"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -22,14 +22,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.773"
-     inkscape:cx="314.72081"
-     inkscape:cy="32.430908"
+     inkscape:cx="624.64749"
+     inkscape:cy="82.628314"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg15" />
+     inkscape:current-layer="svg13" />
   <defs
      id="defs1">
     <marker
@@ -46,199 +46,191 @@
          id="path1" />
     </marker>
   </defs>
-  <!-- boxes -->
   <g
      id="g8"
-     transform="translate(-5.6401577,-67.681892)">
+     transform="translate(-2.8200788,-27.636774)">
     <rect
        x="10"
-       y="80"
-       width="170"
-       height="70"
+       y="55"
+       width="200"
+       height="80"
        rx="10"
        fill="#e7f5ff"
        stroke="#1c7ed6"
        stroke-width="2"
        id="rect1" />
     <text
-       x="95"
-       y="108"
+       x="110"
+       y="90"
        text-anchor="middle"
        font-size="18px"
+       font-weight="bold"
        fill="#1864ab"
-       font-weight="bold"
-       id="text1">Your code</text>
+       id="text1">Working</text>
     <text
-       x="95"
-       y="130"
-       text-anchor="middle"
-       font-size="15px"
-       fill="#343a40"
-       id="text2">src/mypackage/</text>
-    <rect
-       x="285"
-       y="80"
-       width="170"
-       height="70"
-       rx="10"
-       fill="#ebfbee"
-       stroke="#2f9e44"
-       stroke-width="2"
-       id="rect2" />
-    <text
-       x="370"
-       y="108"
+       x="110"
+       y="112"
        text-anchor="middle"
        font-size="18px"
-       fill="#2b8a3e"
        font-weight="bold"
-       id="text3">Distributions</text>
-    <text
-       x="370"
-       y="130"
-       text-anchor="middle"
-       font-size="15px"
-       fill="#343a40"
-       id="text4">wheel + sdist</text>
+       fill="#1864ab"
+       id="text2">directory</text>
     <rect
-       x="560"
-       y="80"
-       width="170"
-       height="70"
-       rx="10"
-       fill="#fff0f6"
-       stroke="#e64980"
-       stroke-width="2"
-       id="rect4" />
-    <text
-       x="645"
-       y="113"
-       text-anchor="middle"
-       font-size="18px"
-       fill="#a61e4d"
-       font-weight="bold"
-       id="text5">PyPI</text>
-    <text
-       x="645"
-       y="134"
-       text-anchor="middle"
-       font-size="13px"
-       fill="#343a40"
-       id="text6">the package index</text>
-    <rect
-       x="820"
-       y="80"
-       width="170"
-       height="70"
+       x="270"
+       y="55"
+       width="200"
+       height="80"
        rx="10"
        fill="#fff9db"
        stroke="#f08c00"
        stroke-width="2"
-       id="rect6" />
+       id="rect2" />
     <text
-       x="905"
-       y="108"
+       x="370"
+       y="90"
        text-anchor="middle"
        font-size="18px"
-       fill="#e67700"
        font-weight="bold"
-       id="text7">Anyone</text>
+       fill="#e67700"
+       id="text3">Staging area</text>
     <text
-       x="905"
-       y="130"
+       x="370"
+       y="112"
        text-anchor="middle"
-       font-size="15px"
+       font-size="14px"
        fill="#343a40"
-       id="text8">pip install</text>
+       id="text4">(the &quot;index&quot;)</text>
+    <rect
+       x="530"
+       y="55"
+       width="200"
+       height="80"
+       rx="10"
+       fill="#ebfbee"
+       stroke="#2f9e44"
+       stroke-width="2"
+       id="rect4" />
+    <text
+       x="630"
+       y="90"
+       text-anchor="middle"
+       font-size="18px"
+       font-weight="bold"
+       fill="#2b8a3e"
+       id="text5">Local repo</text>
+    <text
+       x="630"
+       y="112"
+       text-anchor="middle"
+       font-size="14px"
+       fill="#343a40"
+       id="text6">(.git history)</text>
+    <rect
+       x="790"
+       y="55"
+       width="200"
+       height="80"
+       rx="10"
+       fill="#fff0f6"
+       stroke="#e64980"
+       stroke-width="2"
+       id="rect6" />
+    <text
+       x="890"
+       y="90"
+       text-anchor="middle"
+       font-size="18px"
+       font-weight="bold"
+       fill="#a61e4d"
+       id="text7">Remote</text>
+    <text
+       x="890"
+       y="112"
+       text-anchor="middle"
+       font-size="14px"
+       fill="#343a40"
+       id="text8">(GitHub)</text>
   </g>
-  <!-- arrows -->
   <g
      stroke="#868e96"
      stroke-width="2.5"
      fill="none"
      id="g10"
-     style="fill:#ffffff"
-     transform="translate(-5.6401577,-67.681892)">
+     transform="translate(-2.8200788,-27.636774)"
+     style="fill:#ffffff">
     <line
-       x1="182"
-       y1="115"
-       x2="283"
-       y2="115"
+       x1="212"
+       y1="95"
+       x2="268"
+       y2="95"
        marker-end="url(#arrow)"
        id="line8"
        style="fill:#ffffff" />
     <line
-       x1="457"
-       y1="115"
-       x2="558"
-       y2="115"
+       x1="472"
+       y1="95"
+       x2="528"
+       y2="95"
        marker-end="url(#arrow)"
        id="line9"
        style="fill:#ffffff" />
     <line
        x1="732"
-       y1="115"
-       x2="818"
-       y2="115"
+       y1="95"
+       x2="788"
+       y2="95"
        marker-end="url(#arrow)"
        id="line10"
        style="fill:#ffffff" />
   </g>
-  <!-- arrow labels -->
   <g
-     font-size="15px"
+     font-size="14px"
      fill="#495057"
      text-anchor="middle"
-     font-style="italic"
-     id="g12"
-     style="fill:#ffffff"
-     transform="translate(-5.6401577,-67.681892)">
-    <text
-       x="232"
-       y="105"
-       id="text10"
-       style="fill:#ffffff">build</text>
-    <text
-       x="507"
-       y="105"
-       id="text11"
-       style="fill:#ffffff">upload</text>
-    <text
-       x="775"
-       y="105"
-       id="text12"
-       style="fill:#ffffff">install</text>
-  </g>
-  <!-- captions under arrows -->
-  <g
-     font-size="12.5px"
-     fill="#868e96"
-     text-anchor="middle"
      font-family="monospace"
-     id="g15"
-     style="fill:#ffffff"
-     transform="translate(-5.6401577,-67.681892)">
+     id="g12"
+     transform="translate(-2.8200788,-27.636774)"
+     style="fill:#ffffff">
     <text
-       x="232"
-       y="172"
-       id="text13"
-       style="fill:#ffffff">python -m build</text>
+       x="240"
+       y="48"
+       id="text10"
+       style="fill:#ffffff">git add</text>
     <text
-       x="507"
-       y="172"
-       id="text14"
-       style="fill:#ffffff">twine / uv publish</text>
+       x="500"
+       y="48"
+       id="text11"
+       style="fill:#ffffff">git commit</text>
     <text
-       x="775"
-       y="172"
-       id="text15"
-       style="fill:#ffffff">pip install pkg</text>
+       x="760"
+       y="48"
+       id="text12"
+       style="fill:#ffffff">git push</text>
   </g>
+  <!-- pull return arrow -->
+  <path
+     d="m 887.17992,107.36323 c 0,60 -780,60 -780,2"
+     stroke="#adb5bd"
+     stroke-width="2"
+     fill="none"
+     stroke-dasharray="5, 4"
+     marker-end="url(#arrow)"
+     id="path12"
+     style="fill:#ffffff" />
+  <text
+     x="497.17993"
+     y="182.36322"
+     text-anchor="middle"
+     font-size="13px"
+     fill="#868e96"
+     font-family="monospace"
+     id="text13"
+     style="fill:#ffffff">git pull / git clone</text>
   <rect
      style="fill:none"
-     id="rect15"
-     width="990.41174"
-     height="115.05923"
+     id="rect13"
+     width="995.48785"
+     height="189.50931"
      x="0"
      y="0" />
 </svg>

@@ -112,6 +112,9 @@ Which build backend have you used or do you recommend?
 
 ## Collaboration with Git/GitHub/Workflows {.smaller}
 
+![](images/git-areas.svg)
+
+![](images/branch-merge.svg)
 
 ## Testing {.smaller}
 
