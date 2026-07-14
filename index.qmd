@@ -192,14 +192,83 @@ implementing it? Is this a good place for AI tools?
 6. **GitHub Pages + Actions** — keep that site live and current
 7. **Versioning (SemVer)** — `MAJOR.MINOR.PATCH` tells users what an update means
 
-## Software Licenses {.smaller}
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which of the above do you believe are mandatory vs optional?
+:::
+:::
 
-## Software Citation {.smaller}
+## Software Licenses (`LICENSE.txt`) {.smaller}
 
-## JOSS: Journal of Open Science Software {.smaller}
+- Terms by which others may use or modify your code
+- Proprietary or Free/Open Source (FOSS, FLOSS, OSS)
+  - FOSS categories: permissive and "copyleft"
+    - Permissive: allow further distribution under any license (ex. BSD 3-clause, MIT)
+    - Copyleft: require modifications to be shared under the same license ("viral") (ex. GPL)
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which license do you typically use and why?
+:::
+:::
+
+## Archiving Software {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- Recommended workflow:
+  - `git tag -a v0.0.1 -m "version 0.0.1"`
+  - `git push origin --tags`
+  - Go to GitHub repo -> Releases -> v0.0.1
+  - Create release from tag
+  - Grab the DOI from Zenodo!
+:::
+
+::: {.column width="40%"}
+::: {.fragment .no-reveal}
+![](images/archiving.png){width="100%"}
+:::
+:::
+
+::::
+
+## Reproducibility {.smaller}
+
+## Journal of Open Science Software {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Developer-friendly journal for research software packages
+- Affiliate of Open Source Initiative
+- Open access & no fees
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Would you consider publishing in JOSS?
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .no-reveal}
+![](images/joss-flowchart.png){width="100%"}
+:::
+:::
+
+::::
 
 ## Closing Discussion {.smaller}
 
 + **What do you agree with?**
 + **Disagree with?**
 + **What does implementation look like in practice?**
+
+## Resources {.smaller}
+
+- [Scientific Python Library Development Guide](https://learn.scientific-python.org/development/)
+- [`scientific-python/cookie`](https://github.com/scientific-python/cookie)
+- [choosealicense.com](https://choosealicense.com/)
+- [Open Source Initiative Approved Licenses](https://opensource.org/licenses)
+- [Software Citation Principles](https://peerj.com/articles/cs-86/)
