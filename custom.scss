@@ -1,0 +1,32 @@
+/*-- scss:rules --*/
+
+// Custom "Discussion" callout — Quarto only ships note/tip/warning/important/
+// caution styling, so this hand-rolls the same look (colored border, tinted
+// background, icon title) for a type Quarto doesn't know about.
+div.callout-discussion {
+  border-left: 5px solid #8be9fd;
+  background-color: rgba(139, 233, 253, 0.12);
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+}
+
+div.callout-discussion::before {
+  content: "\1F4AC  Discussion";
+  display: block;
+  font-weight: bold;
+  color: #8be9fd;
+  margin-bottom: 0.3em;
+}
+
+// Quarto's dark reveal theme overrides mermaid's own theme colors via these
+// custom properties, so the %%{init}%% directive in the diagram is ignored.
+// Override them here to get visible, on-brand node fills.
+:root {
+  --mermaid-bg-color: #282a36;
+  --mermaid-node-bg-color: #44475a;
+  --mermaid-node-fg-color: #f8f8f2;
+  --mermaid-edge-color: #f8f8f2;
+  --mermaid-label-bg-color: #44475a;
+  --mermaid-label-fg-color: #f8f8f2;
+}
