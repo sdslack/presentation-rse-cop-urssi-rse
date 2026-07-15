@@ -76,6 +76,9 @@ What are the barriers to applying these in your work?
 <div style="margin-top: 1.5em; margin-bottom: 0.5em">
 ```text
 mypackage/                # the project folder
+├── README.md
+├── CITATION.cff
+├── LICENSE.txt
 ├── pyproject.toml        # the one config file (packaging + tools)
 └── src/
     └── mypackage/        # the package (importable)
@@ -110,11 +113,42 @@ Which build backend have you used or do you recommend?
 :::
 :::
 
-## Collaboration with Git/GitHub/Workflows {.smaller}
+## Git Refresher {.smaller}
 
 ![](images/git-areas.svg)
 
+::: {.fragment .no-reveal}
+Branching & Merging
+
 ![](images/branch-merge.svg)
+:::
+
+## Feature Branching Workflow {.smaller}
+
+![](images/workflow-feature.svg){width="100%"}
+
+::: {.fragment .no-reveal}
+<span>1. Create a branch → 2. Add commits → 3. Push it → 4. Open a pull request → 5. Discuss & merge</span>
+:::
+
+## Forking Workflow {.smaller}
+
+![](images/workflow-forking.svg){width="100%"}
+
+- You don't need write access to the central repo — this is how most open-source contributions work
+
+## Pull Requests {.smaller}
+
+![](images/pr-lifecycle.svg)
+
+- Never send a pull request from `main`
+- Github has a [command-line tool](https://cli.github.com/) (`gh`) for pull requests
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which workflow (feature branching or forking) do you primarily use and why? Do you use Github's CLI?
+:::
+:::
 
 ## Testing {.smaller}
 
@@ -187,21 +221,22 @@ implementing it? Is this a good place for AI tools?
 
 ## Documentation and Versioning {.smaller}
 
-1. **README** — the front door: what, why, how to install
-2. **Comments** — explain the why, never the obvious what
-3. **Self-documenting code** — consistent PEP 8 names do the heavy lifting
-4. **Docstrings** — runtime-accessible API docs; pick one style (NumPy/Google/RST)
-5. **Sphinx** — turns docstrings + pages into a website
-6. **GitHub Pages + Actions** — keep that site live and current
-7. **Versioning (SemVer)** — `MAJOR.MINOR.PATCH` tells users what an update means
+| Level	| Audience | Example |
+|---|---|---|
+| **Instructions**	| Anyone *arriving* at the repo	| `README.rst`, `INSTALL.md` |
+| **API documentation**	| People *calling* your code	| docstrings → Sphinx site |
+| **Self-documenting code**	| People *reading* your code	| [PEP 8](https://peps.python.org/pep-0008/) names |
+| **Comments**	| People *editing* your code	| # why, not what |
+| **User guides**	| Domain users	| Github Pages tutorials |
+| **Versioning** | All of the above | `MAJOR.MINOR.PATCH` |
 
 ::: {.fragment .no-reveal}
 ::: {.callout-discussion}
-Which of the above do you believe are mandatory vs optional?
+Do you do all of the above? Which levels do you believe are the most time consuming or difficult?
 :::
 :::
 
-## Software Licenses (`LICENSE.txt`) {.smaller}
+## Software Licenses {.smaller}
 
 - Terms by which others may use or modify your code
 - Proprietary or Free/Open Source (FOSS, FLOSS, OSS)
@@ -219,7 +254,7 @@ Which license do you typically use and why?
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 - Recommended workflow:
   - `git tag -a v0.0.1 -m "version 0.0.1"`
   - `git push origin --tags`
@@ -228,15 +263,30 @@ Which license do you typically use and why?
   - Grab the DOI from Zenodo!
 :::
 
-::: {.column width="40%"}
-::: {.fragment .no-reveal}
+::: {.column width="45%"}
 ![](images/archiving.png){width="100%"}
-:::
 :::
 
 ::::
 
-## Reproducibility {.smaller}
+## Reproducibility Packs {.smaller}
+
+1. Produce a single repro-pack for an entire paper, which contains:
+    - Plotting scripts and associated results data
+    - Figures (PDFs for plots, always)
+    - Any other relevant data: input files, configuration files, etc.
+2. Upload to Figshare/Zenodo under CC-BY license
+3. Cite using the resulting DOI in the associated paper(s)
+
+::: {.fragment .no-reveal}
+*Lets you reuse your figures without violating the journal copyright.*
+:::
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Have you heard of repro-packs or do you already implement them?
+:::
+:::
 
 ## Journal of Open Science Software {.smaller}
 
