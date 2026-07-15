@@ -15,14 +15,13 @@ author:
     email: "sarah.slack@cuanschutz.edu"
 ---
 
-## URSSI Summer School {.smaller}
+## URSSI Summer School Overview {.smaller}
 
-- URSSI = US Research Software Sustainability Institute
-- Credit for this presentation:
-  [Summer School 2026](https://github.com/si2-urssi/summerschool-June2026)
-
-- *Note that the workshop was python-focused - and so this presentation covers*
-  *python-focused tools - but the principles are applicable to other languages.*
+- **URSSI:** U.S. Research Software Sustainability Institute
+- This presentation is adapted from materials developed for the
+[June 2026 URSSI Summer School](https://github.com/si2-urssi/summerschool-June2026)
+  - *The workshop used* **Python** *for its examples and tools, but the principles*
+  *here apply across languages*
 
 ## Presentation Goals {.smaller}
 
@@ -40,35 +39,50 @@ author:
   - Windows/projects with non-python dependencies: use Anaconda
     - options: miniforge, pixi, micromamba
 
+::: {.fragment .no-reveal}
 ::: {.callout-discussion}
 Do you use one system for all projects, or select the best system for each
 project?
 :::
+:::
 
 ## Software Design & Modularity {.smaller}
 
-- Three targets for simpler programs:
-  1. **Modular:** break code into small pieces that can be understood
-  separately
-  2. **Reusable:** enable code to be maintained, reused, and extended
-  3. **Foresight:** anticipate and design for how software will be used
+- Why modularity?
+  1. **Understandability:** break code into small pieces that can be understood
+    separately
+  2. **Maintainability & Reuse:** make code easier to maintain, reuse, and
+  extend
+  3. **Adaptability:** design code that can accomodate future requirements and
+  new uses
 
 ## Software Design & Modularity {.smaller}
 
-- Five core ideas:
+- A modular codebase should be:
   1. **Decomposable:** broken into modules
   2. **Composable:** can be reused
   3. **Understandable:** each module alone
-  4. **Continuity:** requirement change affects few modules
-  5. **Isolation:** error in a module does not affect others
+  4. **Continuous:** small requirement change affects few modules
+  5. **Isolated:** error in one module does not affect others
 
-- Suggested use of common patterns:
-  - Abstract base classes for common interface across data sources
-  - Factory pattern for choosing implementation of common interface
-    - [Link to common python patterns](https://github.com/faif/python-patterns)
-
+::: {.fragment .no-reveal}
 ::: {.callout-discussion}
-What are the barriers to applying these in your work?
+Which of these is hardest to achieve in your work?
+:::
+:::
+
+## Software Design & Modularity {.smaller}
+
+- Common design patterns to help achieve modularity:
+  - Abstract Base Classes: define common interface
+  - Factory Pattern: select appropriate implementation of common interface
+  - Many others!
+  - [Link to common python patterns](https://github.com/faif/python-patterns)
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+What type of patterns do you reach for in your work?
+:::
 :::
 
 ## Structuring Python Packages {.smaller}
@@ -150,74 +164,180 @@ Which workflow (feature branching or forking) do you primarily use and why? Do y
 :::
 :::
 
+## Participating in Code Review {.smaller}
+
+*Common practices in open-source software development:*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- **Contributor:**
+  - Keep PR small and focused
+  - Explain *what* changed and *why*
+  - Include tests and documentation
+  - Respond constructively to feedback
+  - Revise the PR until ready to merge
+
+:::
+::: {.column width="50%"}
+
++ **Reviewer:**
+  ([link to checklist](https://arfc.github.io/manual/guides/pull_requests)):
+  - Understand the motivation
+  - Check correctness and readability
+  - Review tests and documentation
+  - Consider the user experience
+  - Give constructive feedback
+  - Approve the PR when ready to merge
+
+:::
+::::
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Do you regularly participate in code review? What is practical in your work?
+:::
+:::
+
 ## Testing {.smaller}
 
-- Write tests for expected outputs, module integration, edge cases
-- Tests check new changes don't break existing code
-- Tests can guide code refactoring by showing you the user experience
-- Write mostly **unit**, some integration, and fewer functional tests
+:::: {.columns}
 
-::: {.callout-discussion}
-Do you write tests? How do you decide what to test?
+::: {.column width="55%"}
+
+- *Why?* Tests ensure new changes don't break existing code and help guide
+  refactoring by exposing the user experience
+- Test expected behavior and edge cases at multiple levels:
+  - **unit tests:** a single function or class in isolation
+  - **integration tests:** multiple modules working together
+  - **functional tests:** whole workflow from the user perspective
+- Most tests should be **unit tests**
+- **pytest** auto runs `test_*.py` files and `test_*` functions
+
 :::
+
+::: {.column width="45%"}
+
+```text
+my_project/
+├── src/
+│   └── my_project/
+│       └── module_a.py
+└── tests/
+    └── test_module_a.py
+```
+
+<div style="margin-top: 1.5em">
+```python
+# tests/test_module_a.py
+
+def test_mean():
+    assert mean([1, 2, 3]) == 2
+```
+</div>
+
+<div style="margin-top: 1em">
+```text
+$ pytest
+======= 1 passed in 0.01s =======
+```
+</div>
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+How do you verify your code is correct? Where does automated testing fit in to your projects?
+:::
+:::
+
+:::
+::::
+
 
 ## Linting/Formatting/Type Checking {.smaller}
 
-- **linting:** look for common problems in the code (unused variables, double
-  imports, etc.)
-- **formatting:** reformat code to a consistent style
-- **type checking:** verifies types are consistent with code, if written with
-  type hints
+- *What?*
+  - **linting:** flags problems in code (unused variables, duplicate
+    imports, etc.)
+  - **formatting:** reformats code to a consistent style
+  - **type checking:** verifies consistency with declared types
 
-- Use `.pre-commit-config.yaml` to automatically enforce code style and
-  formatting
-  - For python: black (formatting), ruff (linting), mypy (type checking)
-- Use `.pyproject.toml` to configure formatting and linting options
+:::: {.columns}
 
+::: {.column width="75%"}
+
+- *How?*
+  - **Pre-commit** runs configured checks automatically during `git commit`
+  - Configure these checks in `.pre-commit-config.yaml`
+
+:::
+
+::: {.column width="25%"}
+
+::: {.fragment .no-reveal}
+<div style="margin-top: 1em; margin-bottom: 0.5em">
+```yaml
+repos:
+  - repo: ...
+    hooks:
+      - id: ruff
+      - id: black
+      - id: mypy
+```
+</div>
+:::
+
+:::
+::::
+
+::: {.fragment .no-reveal}
 ::: {.callout-discussion}
-Which of these three tools do you use regularly, whether in python or
-equivalents for a different language?
+Which of these do you use? Do you use pre-commit or run manually?
+:::
 :::
 
 ## Continuous Integration {.smaller}
 
-of testing and linting/formatting/type checking
+- **CI:** automatically runs project checks whenever code changes are pushed
+or proposed
+  - Implement with **GitHub Actions:** which can automatically run tests,
+  linting, formatting, and type checking on every push or pull request
+  - Can also use to build documentation, measure percentage of code covered
+  by tests, and deploy to PyPI for new releases
 
-- Use `.yml` file in `.github/workflows/` to run tests across OS and python
-  versions & run linting/formatting/type checking through GitHub Actions
-- Optionally add check of code coverage with `pytest-cov`
+:::: {.columns}
 
+::: {.column width="55%"}
+- Add `.yml` file in `.github/workflows/` to trigger GitHub Actions
+- GitHub Actions are free for public repos, some limits on private repos
 
-*TODO: is it worth showing .yml? and pre-commit file?*
-*TODO: do we want to cover automated release/PyPI packaging here?*
-
-## Peer Code Review {.smaller}
-
-**Code review:**
-
-```{mermaid}
-flowchart LR
-    A[Contributor opens PR] --> B[Reviewer reviews & comments]
-    B --> C[Contributor revises & replies]
-    C --> B
-    C --> D[Reviewer approves]
-    D --> E[PR is merged]
-```
-
-+ Reviewer steps
-  ([link to detailed checklist](https://arfc.github.io/manual/guides/pull_requests)):
-  1. Read the PR description
-  2. Read the documentation
-  3. Look through the code
-  4. Check the tests
-  5. Consider the user
-  6. Suggest constructive improvements
-  7. Try to use the new feature
-
+::: {.fragment .no-reveal}
 ::: {.callout-discussion}
-Is code review a regular part of your work? What are the barriers to
-implementing it? Is this a good place for AI tools?
+Do your repos have CI workflows? What tasks are most important to automate?
 :::
+:::
+
+:::
+
+::: {.column width="45%"}
+<div style="margin-top: 0.5em">
+```yaml
+# .github/workflows/ci.yml
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install -e .[dev]
+      - run: pytest
+```
+</div>
+
+:::
+::::
+
 
 ## Documentation and Versioning {.smaller}
 
@@ -320,8 +440,11 @@ Would you consider publishing in JOSS?
 
 ## Resources {.smaller}
 
+- **[URSSI Summer School 2026](https://github.com/si2-urssi/summerschool-June2026)**
 - [Scientific Python Library Development Guide](https://learn.scientific-python.org/development/)
 - [`scientific-python/cookie`](https://github.com/scientific-python/cookie)
 - [choosealicense.com](https://choosealicense.com/)
 - [Open Source Initiative Approved Licenses](https://opensource.org/licenses)
 - [Software Citation Principles](https://peerj.com/articles/cs-86/)
+- [Link to common python patterns for modularity](https://github.com/faif/python-patterns)
+- [Detailed PR reviewer checklist](https://arfc.github.io/manual/guides/pull_requests)
