@@ -308,7 +308,7 @@ or proposed
 
 ::: {.column width="55%"}
 - Add `.yml` file in `.github/workflows/` to trigger GitHub Actions
-- GitHub Actions are free for public repos, some limits on private repos
+- Free for public repos, limits on private repos
 
 ::: {.fragment .no-reveal}
 ::: {.callout-discussion}
