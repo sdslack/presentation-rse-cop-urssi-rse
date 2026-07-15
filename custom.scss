@@ -30,3 +30,19 @@ div.callout-discussion::before {
   --mermaid-label-bg-color: #44475a;
   --mermaid-label-fg-color: #f8f8f2;
 }
+
+.reveal .fragment.no-reveal {
+  opacity: 0;
+  visibility: hidden;
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+.reveal .fragment.no-reveal.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  transform: none !important;
+  filter: none !important;
+}

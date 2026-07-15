@@ -73,9 +73,82 @@ What are the barriers to applying these in your work?
 
 ## Structuring Python Packages {.smaller}
 
+<div style="margin-top: 1.5em; margin-bottom: 0.5em">
+```text
+mypackage/                # the project folder
+├── README.md
+├── CITATION.cff
+├── LICENSE.txt
+├── pyproject.toml        # the one config file (packaging + tools)
+└── src/
+    └── mypackage/        # the package (importable)
+        ├── __init.py__   # makes it a package; defines the public API
+        └── module.py     # single .py file with definitions (functions, classes, ...)
+```
+</div>
 
-## Collaboration with Git/GitHub/Workflows {.smaller}
+- **TOML**: minimal configuration file format ([link](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/))
+  - plain text file of `key = value` settings grouped under `[section]` headers
+  - easy for humans to read and machines to parse
 
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Have you made a python package? If so, did you use a .toml file?
+:::
+:::
+
+## Building Python Packages {.smaller}
+
+<div style="margin-top: 0; padding-top: 0;">
+![](images/build-pipeline.svg)
+</div>
+
+- **Building:** turning your human-readable source code into a tidy, installable bundle
+  - a build **backend** (ex. `setuptools`) is the tool that *does* the building
+  - a build **frontend** (ex. `pip` or `build`) is the tool *you run*, which calls the backend
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which build backend have you used or do you recommend?
+:::
+:::
+
+## Git Refresher {.smaller}
+
+![](images/git-areas.svg)
+
+::: {.fragment .no-reveal}
+Branching & Merging
+
+![](images/branch-merge.svg)
+:::
+
+## Feature Branching Workflow {.smaller}
+
+![](images/workflow-feature.svg){width="100%"}
+
+::: {.fragment .no-reveal}
+<span>1. Create a branch → 2. Add commits → 3. Push it → 4. Open a pull request → 5. Discuss & merge</span>
+:::
+
+## Forking Workflow {.smaller}
+
+![](images/workflow-forking.svg){width="100%"}
+
+- You don't need write access to the central repo — this is how most open-source contributions work
+
+## Pull Requests {.smaller}
+
+![](images/pr-lifecycle.svg)
+
+- Never send a pull request from `main`
+- Github has a [command-line tool](https://cli.github.com/) (`gh`) for pull requests
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which workflow (feature branching or forking) do you primarily use and why? Do you use Github's CLI?
+:::
+:::
 
 ## Testing {.smaller}
 
@@ -148,12 +221,107 @@ implementing it? Is this a good place for AI tools?
 
 ## Documentation and Versioning {.smaller}
 
+| Level	| Audience | Example |
+|---|---|---|
+| **Instructions**	| Anyone *arriving* at the repo	| `README.rst`, `INSTALL.md` |
+| **API documentation**	| People *calling* your code	| docstrings → Sphinx site |
+| **Self-documenting code**	| People *reading* your code	| [PEP 8](https://peps.python.org/pep-0008/) names |
+| **Comments**	| People *editing* your code	| # why, not what |
+| **User guides**	| Domain users	| Github Pages tutorials |
+| **Versioning** | All of the above | `MAJOR.MINOR.PATCH` |
 
-## Open Science & Software Citation {.smaller}
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Do you do all of the above? Which levels do you believe are the most time consuming or difficult?
+:::
+:::
 
+## Software Licenses {.smaller}
+
+- Terms by which others may use or modify your code
+- Proprietary or Free/Open Source (FOSS, FLOSS, OSS)
+  - FOSS categories: permissive and "copyleft"
+    - Permissive: allow further distribution under any license (ex. BSD 3-clause, MIT)
+    - Copyleft: require modifications to be shared under the same license ("viral") (ex. GPL)
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Which license do you typically use and why?
+:::
+:::
+
+## Archiving Software {.smaller}
+
+:::: {.columns}
+
+::: {.column width="55%"}
+- Recommended workflow:
+  - `git tag -a v0.0.1 -m "version 0.0.1"`
+  - `git push origin --tags`
+  - Go to GitHub repo -> Releases -> v0.0.1
+  - Create release from tag
+  - Grab the DOI from Zenodo!
+:::
+
+::: {.column width="45%"}
+![](images/archiving.png){width="100%"}
+:::
+
+::::
+
+## Reproducibility Packs {.smaller}
+
+1. Produce a single repro-pack for an entire paper, which contains:
+    - Plotting scripts and associated results data
+    - Figures (PDFs for plots, always)
+    - Any other relevant data: input files, configuration files, etc.
+2. Upload to Figshare/Zenodo under CC-BY license
+3. Cite using the resulting DOI in the associated paper(s)
+
+::: {.fragment .no-reveal}
+*Lets you reuse your figures without violating the journal copyright.*
+:::
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Have you heard of repro-packs or do you already implement them?
+:::
+:::
+
+## Journal of Open Science Software {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Developer-friendly journal for research software packages
+- Affiliate of Open Source Initiative
+- Open access & no fees
+
+::: {.fragment .no-reveal}
+::: {.callout-discussion}
+Would you consider publishing in JOSS?
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .no-reveal}
+![](images/joss-flowchart.png){width="100%"}
+:::
+:::
+
+::::
 
 ## Closing Discussion {.smaller}
 
 + **What do you agree with?**
 + **Disagree with?**
 + **What does implementation look like in practice?**
+
+## Resources {.smaller}
+
+- [Scientific Python Library Development Guide](https://learn.scientific-python.org/development/)
+- [`scientific-python/cookie`](https://github.com/scientific-python/cookie)
+- [choosealicense.com](https://choosealicense.com/)
+- [Open Source Initiative Approved Licenses](https://opensource.org/licenses)
+- [Software Citation Principles](https://peerj.com/articles/cs-86/)
